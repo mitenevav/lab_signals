@@ -122,16 +122,16 @@ class Executor():
         return None, None
 
 
-executor = Executor('data/door.jpg')
+executor = Executor(os.path.join('data','door.jpg'))
 
-ims_positive = glob.glob(os.path.join(f'data/positive/', '*.jpg'))
+ims_positive = glob.glob(os.path.join('data','positive', '*.jpg'))
 
 positive_results = []
 for img in ims_positive:
     positive_results.append(executor.run(img, True))
 
 
-ims_negative = glob.glob(os.path.join(f'data/negative/', '*.jpg'))
+ims_negative = glob.glob(os.path.join('data', 'negative', '*.jpg'))
 
 negative_results = []
 for img in ims_negative:
